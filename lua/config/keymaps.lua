@@ -14,3 +14,11 @@ map("n", "<F1>", ':lua require("harpoon.ui").nav_file(1)<cr>', { desc = "Jump to
 map("n", "<F2>", ':lua require("harpoon.ui").nav_file(2)<cr>', { desc = "Jump to file 2" })
 map("n", "<F3>", ':lua require("harpoon.ui").nav_file(3)<cr>', { desc = "Jump to file 3" })
 map("n", "<F4>", ':lua require("harpoon.ui").nav_file(4)<cr>', { desc = "Jump to file 4" })
+
+--copilot
+-- map("n", "<leader>cc", "<cmd>lua require('copilot').complete()<cr>", { desc = "Copilot complete" })
+vim.keymap.set("i", "<F5>", 'copilot#Accept("\\<CR>")', {
+  expr = true,
+  replace_keycodes = false,
+})
+vim.g.copilot_no_tab_map = true
